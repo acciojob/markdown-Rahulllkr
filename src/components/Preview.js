@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { marked } from 'marked';
 
 const Preview = ({text}) => {
+    const [markdown,setMarkdown] = useState("");
+
+    useEffect(() => {
+        const html =  marked(text || "")
+        setMarkdown(html)
+    },[text])
   return (
-    <div className='preview'>
-        <h1>{text}</h1>
-    </div>
+    <div
+      className='preview'
+      dangerouslySetInnerHTML={{ __html: markdown }}
+    />
   )
 }
 
