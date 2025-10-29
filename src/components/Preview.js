@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
 const Preview = ({text}) => {
   return (
     <div className='preview'>
-        <h1>{text}</h1>
+        <ReactMarkdown> {input} </ReactMarkdown>
     </div>
   )
 }
