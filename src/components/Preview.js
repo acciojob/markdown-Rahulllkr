@@ -1,10 +1,9 @@
 import React from 'react'
-import ReactMarkdown from "react-markdown"
 
 const Preview = ({text}) => {
   return (
     <div className='preview'>
-        <ReactMarkdown>{text}</ReactMarkdown>
+        <h1>{text}</h1>
     </div>
   )
 }
