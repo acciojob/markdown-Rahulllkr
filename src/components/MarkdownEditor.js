@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
-const Preview = ({text}) => {
+const MarkdownEditor = ({text}) => {
   return (
     <div className='preview'>
-        <ReactMarkdown><h1>{text}</h1></ReactMarkdown>
+        <ReactMarkdown>{text}</ReactMarkdown>
     </div>
   )
 }
 
-export default Preview
+export default MarkdownEditor

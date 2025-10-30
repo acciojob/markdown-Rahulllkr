@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
-import Input from './Input'
-import Preview from './Preview'
+import MarkdownEditor from './MarkdownEditor'
 
 const App = () => {
     const [text,setText] = useState("")
   return (
     <div className='app' style={{display:"flex",justifyContent:"space-evenly"}}>
-        <Input text={text} setText={setText}/>
-        <Preview text={text}/>
+      <textarea id='textarea' value={text} onChange={(e) => setText(e.target.value)} />
+        <MarkdownEditor text={text}/>
     </div>
   )
 }
